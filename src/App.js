@@ -1,13 +1,11 @@
 import React from 'react';
-import './App.css';
-import Button from './components/Button/Button'
+import './App.scss';
+import Header from './components/Header/Header'
 
 function App() {
   return (
     <div className="App">
-      <Button>
-        click me
-      </Button>
+      <Header/>
     </div>
   );
 }
