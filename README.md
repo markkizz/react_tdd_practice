@@ -1,4 +1,4 @@
-# What's Lunch
+# React Redux TDD
 
 ## 📖 Description
 
@@ -21,10 +21,11 @@ This repo is for practice TDD with React and Redux
 ```
 
 ### Basic config of testing
+
 ```
 // setupTests.js
 import Enzyme from 'enzyme'
-import EnzymeAdapter from 'enzyme-adapter-react-16' 
+import EnzymeAdapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({
   adapter: new EnzymeAdapter(),

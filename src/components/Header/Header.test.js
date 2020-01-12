@@ -1,22 +1,22 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { findByTestAttr } from '../../../utils/findByAttr'
+import { findByTestAttr } from "../../../utils/findByAttr";
 import Header from "./Header";
 
-const setUpComponent = (props={}) => shallow(<Header {...props} />);
+const setUpComponent = (props = {}) => shallow(<Header {...props} />);
 
-describe("Header Component", () => {  
+describe("Header Component", () => {
   // # refactor to utils
   let component;
   // this func will run before testing
   beforeEach(() => {
-    component = setUpComponent()
-  })
+    component = setUpComponent();
+  });
 
   it("Should header have .headerComponent", () => {
     console.log(component.debug()); // log for debug
-    const wrapper = findByTestAttr(component, "data-test", 'headerComponent') // component.find(`[id='logoImg']`)
-    console.log(wrapper.length); 
+    const wrapper = findByTestAttr(component, "data-test", "headerComponent"); // component.find(`[id='logoImg']`)
+    console.log(wrapper.length);
     expect(wrapper.length).toBe(1); // shollow .length === 1 becuase classname should have 1
   });
 
@@ -24,7 +24,7 @@ describe("Header Component", () => {
     const logo = findByTestAttr(component, "id", "logoImg"); // component.find(`[id='logoImg']`)
     expect(logo.length).toBe(1);
   });
-})
+});
 
 /* -------------------------
 const setUpComponent = (props = {}) => shallow(<Header />);
