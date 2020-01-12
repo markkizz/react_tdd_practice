@@ -10,37 +10,40 @@ describe("Headline Component", () => {
     let component;
     beforeEach(() => {
       const props = {
-        header: 'Jesting',
-        desc: 'Click me please'
-      }
-      component = setupComponent(props)
-    })
-    it('Should render HeadlineComponent', () => {
-      const wrapper = findByTestAttr(component, 'data-test', 'headlineComponent')
-      expect(wrapper.length).toBe(1)
-    })
+        header: "Jesting",
+        desc: "Click me please"
+      };
+      component = setupComponent(props);
+    });
+    it("Should render HeadlineComponent", () => {
+      const wrapper = findByTestAttr(
+        component,
+        "data-test",
+        "headlineComponent"
+      );
+      expect(wrapper.length).toBe(1);
+    });
 
-    it('Should render H1', () => {
-      const h1 = component.find('h1.header')
-      expect(h1.length).toBe(1)
-    })
+    it("Should render H1", () => {
+      const h1 = component.find("h1.header");
+      expect(h1.length).toBe(1);
+    });
 
-    it('Should render description', () => {
-      const desc = component.find('p.desc')
-      expect(desc.length).toBe(1)
-    })
-
+    it("Should render description", () => {
+      const desc = component.find("p.desc");
+      expect(desc.length).toBe(1);
+    });
   });
 
   describe("Have No props", () => {
-    let component
+    let component;
     beforeEach(() => {
-      component = setupComponent()
-    })
+      component = setupComponent();
+    });
 
-    it('Should no h1 and desc', () => {
-      const h1 = component.find('h1.header')
-      expect(h1.length).toBe(0)
-    })
+    it("Should no h1 and desc", () => {
+      const h1 = component.find("h1.header");
+      expect(h1.length).toBe(0);
+    });
   });
 });
