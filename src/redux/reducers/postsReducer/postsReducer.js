@@ -1,11 +1,16 @@
 import { postTypes } from "../../actions/types";
 
-const initialState = {};
+const initialState = {
+  posts: []
+};
 
 const postsReducer = (state = initialState, action) => {
   switch (action.type) {
     case postTypes.GET_POST:
-      return action.payload;
+      return {
+        ...state,
+        posts: action.payload
+      };
     default:
       return state;
   }
